@@ -1,0 +1,14 @@
+{
+  "project_name": "AE",
+  "root": "automan",
+  "sources": [
+    "/Users/shrutibansal/Desktop/AE"
+  ],
+  "workers": [
+    {
+      "host": "localhost",
+      "home": "",
+      "nfs": false
+    }
+  ]
+}
