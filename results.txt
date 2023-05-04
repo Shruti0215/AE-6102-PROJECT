@@ -7,4 +7,4 @@ Result and Observations
      
 2. The main reason for above observation was recursion which was consuming a lot of time 
 
-
+3. so we implmented no recursion with numba , but output was not significant due to low FLOP count
