@@ -86,37 +86,6 @@ def is_valid_move(board, i, j, val):
     return True
 
 
-def solve_sudoku_n(board):
-    empty_cells = [(i, j) for i in range(n*n) for j in range(n*n) if board[i][j] == 0]
-    idx = 0
-    while idx >= 0 and idx < len(empty_cells):
-        i, j = empty_cells[idx]
-        found = False
-        for val in range(board[i][j] + 1, n*n+1):
-            if is_valid_move_n(board, i, j, val):
-                board[i][j] = val
-                idx += 1
-                found = True
-                break
-        if not found:
-            board[i][j] = 0
-            idx -= 1
-    return board
-
-
-def is_valid_move_n(board, i, j, val):
-    # Check row
-    if val in board[i]:
-        return False
-    # Check column
-    if val in [board[x][j] for x in range(n*n)]:
-        return False
-    # Check nxn subgrid
-    sub_i, sub_j = i // n * n, j // n * n
-    if val in [board[sub_i + m][sub_j + o] for m in range(n) for o in range(n)]:
-        return False
-    return True
-
 t0 = time()
 p = solve_sudoku(board)
 t1 = time()
