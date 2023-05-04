@@ -1,0 +1,6 @@
+Result and Observations 
+
+1. The time taken by backtracking method increased significantly as value of n increases 
+     n=2, time = 0.0003757476806640625
+     n=3, time = 0.0007798671722412109
+     n
